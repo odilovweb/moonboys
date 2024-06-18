@@ -5,25 +5,30 @@ const bot = new Telegraf("7360174228:AAGa2AreX6ICe1d3Eyq_IMQ71DFkpVpZ7iA");
 
 bot.start(async (ctx) => {
   try {
-    await ctx.reply("Buy $Mboys 👨‍🚀 and go to the moon 🚀🚀🚀🚀", {
-      reply_to_message_id: ctx.message.message_id,
-      reply_markup: {
-        inline_keyboard: [
-          [
-            {
-              text: "Buy $MBoys 💎",
-              url: "https://dexscreener.com/bsc/0xC28cf3c35E63cBB13aaB281FA941fec472A46c0C",
-            },
+    await ctx.reply(
+      `Buy $Mboys 👨‍🚀 and go to the moon 🚀🚀🚀🚀
+
+/help - Botdagi barcha buyruqlar`,
+      {
+        reply_to_message_id: ctx.message.message_id,
+        reply_markup: {
+          inline_keyboard: [
+            [
+              {
+                text: "$MBoys sotib olish 💎",
+                url: "https://dexscreener.com/bsc/0xC28cf3c35E63cBB13aaB281FA941fec472A46c0C",
+              },
+            ],
+            [
+              {
+                text: "Telegram Guruh 📢",
+                url: "https://t.me/mboyscoin",
+              },
+            ],
           ],
-          [
-            {
-              text: "Telegram Community 📢",
-              url: "https://t.me/mboyscoin",
-            },
-          ],
-        ],
-      },
-    });
+        },
+      }
+    );
   } catch (e) {
     console.log(e);
   }
