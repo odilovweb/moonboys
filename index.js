@@ -105,7 +105,7 @@ bot.command("contract", (ctx) => {
 });
 
 bot.on("message", async (ctx) => {
-  const text = await ctx.message.text;
+  const text = await ctx.message.text.toLowerCase();
   if (text.includes("kontrakt")) {
     try {
       ctx.reply("0x8f95cac371152f44BB7D05f551de15571404c3f2", {
